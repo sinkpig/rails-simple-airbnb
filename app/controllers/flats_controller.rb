@@ -5,7 +5,7 @@ class FlatsController < ApplicationController
     @flats = Flat.all
     if params[:query].present?
       # Query inside where
-      @flats = Flat.where(name: params[:query])
+      @flats = Flat.where("name LIKE '%#{params[:query]}%'")
     end
   end
 
