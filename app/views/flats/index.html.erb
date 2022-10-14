@@ -1,0 +1,9 @@
+<div class="container my-5">
+  <h1>All our Flats</h1>
+  <p>All <%= @flats.count %> flat<%= 's' if @flats.count > 1 %>.</p>
+  <div class="row justify-content-center">
+    <% @flats.each do |flat| %>
+      <%= render 'flat', flat: flat %>
+    <% end %>
+  </div>
+</div>

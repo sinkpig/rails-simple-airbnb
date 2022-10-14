@@ -1,0 +1,54 @@
+<div style="height: 350px; background-position: center; background-size: cover; background-image: url('https://source.unsplash.com/random/1280x720/?<%= @flat.name %>')"></div>
+<div class="container my-5 position-relative" style="top: -130px;">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div class="card bg-light shadow-sm border-0 mb-3">
+        <div class="card-body">
+          <h1 class="mb-3"><%= @flat.name %></h1>
+          <p><%= @flat.address %></p>
+        </div>
+      </div>
+      <div class="card bg-light shadow-sm border-0">
+        <div class="card-body">
+          <h5>A bit more about this flat...</h5>
+          <p class="mb-3"><%= @flat.description %></p>
+          <div class="bg-success" style="height: 300px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card bg-light shadow-sm border-0 mb-3">
+        <div class="card-body">
+          <h5>Book this place!</h5>
+        </div>
+      </div>
+      <div class="card bg-light shadow-sm border-0 mb-3">
+        <div class="card-body">
+          <h5>Details</h5>
+          <div class="d-flex">
+            <span class="me-3">
+              <i class="fa-solid fa-people-line"></i>
+              <%= @flat.number_of_guests %>
+            </span>
+            <span>
+              <i class="fa-solid fa-euro-sign"></i>
+              <%= @flat.price_per_night %>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-light shadow-sm border-0">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <p class="fw-b">Share!</p>
+            <div>
+              <i class="fa-brands fa-facebook-square me-2"></i>
+              <i class="fa-brands fa-twitter-square me-2"></i>
+              <i class="fa-brands fa-pinterest-square me-2"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container my-5">
+  <div class="row justify-content-center bg-light w-50 mx-auto">
+    <h1 class="mb-3">Add a new Flat</h1>
+    <%= simple_form_for (@flat) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :description, as: :text %>
+      <%= f.input :price_per_night %>
+      <%= f.input :number_of_guests %>
+      <%= f.submit "Update posting", class: "btn btn-primary d-block w-100" %>
+    <% end %>
+  </div>
+</div>

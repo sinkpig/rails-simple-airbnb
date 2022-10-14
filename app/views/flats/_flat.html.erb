@@ -1,0 +1,24 @@
+<div class="col-3">
+  <div class="card">
+    <img src="https://source.unsplash.com/random/200x150/?<%= flat.name %>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card-text"><%= flat.address %></p>
+      <div class="d-flex">
+        <span class="me-3">
+          <i class="fa-solid fa-people-line"></i>
+          <%= flat.number_of_guests %>
+        </span>
+        <span>
+          <i class="fa-solid fa-euro-sign"></i>
+          <%= flat.price_per_night %>
+        </span>
+      </div>
+    </div>
+    <div class="card-body">
+      <%= link_to "More info", flat_path(flat), class: "card-link text-primary" %>
+      <%= link_to "Edit", edit_flat_path(flat), class: "card-link text-warning" %>
+      <%= link_to "Remove", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "card-link text-danger" %>
+    </div>
+  </div>
+</div>
